@@ -4,23 +4,23 @@ const mongoose=require("mongoose");
 const employeeSchema= new mongoose.Schema({
     fullname: {
         type: String,
-        // required: true
+        required: true
     },
     username: {
         type: String,
-        // required: true
+        required: true
     },
     email: {
         type: String,
-        // required: true
+        required: true
     },
     phone: {
         type: Number,
-        // required: true
+        required: true
     },
     password: {
         type: String,
-        // required: true
+        required: true
     },
     confirm: {
         type: String,
