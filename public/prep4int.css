@@ -1,10 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* navigation popup *********************************************************************************** */
+ul li.lioful {
+    position: relative;
+    margin-left: 580px;
+}
+
+ul li.lioful a { 
+    display: block;
+    padding: 2px 50px;
+    color: #FFF;
+    /* text-decoration: none; */
+    text-align: center;
+    font-size: 30px;
+} 
+ul li ul.dropdown li {
+    display: block;
+    background-color: rgb(78, 78, 236);
+}
+
+ul li ul.dropdown li a {
+    font-size: 20px;
+    padding: 10px 1px;
+}
+
+
+ul li ul.dropdown {
+    /* width: 100%; */
+    background: rgb(78, 78, 236);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li.lioful a:hover {
+    transform: translateY(-2px);
+    transition:  0.3s linear;
+    box-shadow: 1px 1px 2px 2px black; 
+    border: #000;
+    border-radius: 5px;
+    color: rgb(12, 2, 0); 
+    background-color: rgb(107, 237, 128);
+}
+
+ul li.lioful:hover ul.dropdown {
+    display: block;
+}
+
+/*home page **************************************************************************************************** */
 nav ul{
+    /* position: fixed; */
+    width: 100%;
     display: flex;
     align-items: center;
     list-style-type: none;
     height: 65px;
     background-color: rgb(78, 78, 236);
     color: white;
+    z-index: 10;
 }
 .brand img{
     width: 84px;
@@ -15,17 +71,23 @@ nav ul{
 nav ul li{
     padding: 0 15px;
 }
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
 .nav1{
     padding-right: 35px;
 }
 .nav1:hover{
+    color: rgb(12, 2, 0); 
     transform: translateY(-2px);
     transition:  0.3s linear;
     box-shadow: 1px 1px 2px 2px black; 
     border: #000;
     border-radius: 5px;
-    color: rgb(12, 2, 0); 
-    background-color: rgb(107, 237, 128);
+    background-color: rgb(28, 189, 55);
+    text-shadow: #000;
 }
 .brand {
     display: flex;
@@ -39,6 +101,8 @@ nav ul li{
     padding-left: 60px;
     font-size: 1.1rem;
 }
+
+
  .containers{
     display: flex;
     background-color: rgb(242, 229, 210);
@@ -51,26 +115,6 @@ nav ul li{
    border-radius: 12px;
    padding: 54px;
 }
-/* #goabout{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-color: rgba(0,0,0,0.5);
-    background-blend-mode: overlay;
-}
-#video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 70%;
-    z-index: -1;
-    border: 1px solid black;
-    border-radius: 10px;
-} */
 .container1{
     margin-top: 150px;
     margin-right: 150px;
@@ -156,9 +200,10 @@ nav ul li{
     font-size: 1.1rem;
 }
 
-/* 1.1  *********************************************************************************************************/
+/* que *********************************************************************************************************/
 .a{
-    padding-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,8 +240,8 @@ nav ul li{
     display: grid;
     grid-template-rows: repeat(15, 35vw);
     grid-template-columns: repeat(1, 96vw);
-    grid-gap: 50px;
-    padding-top: 30px;
+    grid-gap: 20px;
+    padding-top: 10px;
     padding-left: 10px;
     background-color: bisque;
   }
@@ -209,37 +254,23 @@ nav ul li{
 
 .aman1 {
     padding-left: 50px;
+    padding-top: 5px;
 }
 .aman11 {
-   padding-left: 50px;
+   padding: 10px 50px;
 }
 
-/* ********************************************************************************************************************************* */
-
-.contact{
-    background-color: rgb(241, 231, 216);
-}
-.contactus{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    padding: 20px;
-}
-.aaa{
-    display: flex;
-    padding-left: 200px;
-    padding-right: 200px;
-}
-.aaa1{
-    display: flex;
-    flex-wrap: wrap;
-}
-.bbb{
-    color: gray;
+.aman11 a {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
 }
 
-/* overview ******************************************************************************************************/
+.aman11 a p{
+    padding-top: 10px;
+}
+
+/* alltopics overview ******************************************************************************************************/
 .wrapper{
     display: flex;
     width: 100%;
@@ -347,8 +378,6 @@ nav ul li{
     margin:auto;
     margin-top:35px;
     border-radius: 30px;
-    border: 2px solid black;
-    border-style: outset;
 }
 .info-wrap{
     width:35%;
@@ -461,8 +490,7 @@ nav ul li{
     width: 100%;
     padding: 15px 5px 5px 5px;
 }
-.form-fields input,
-.form-fields textarea{
+.form-fields input, .form-fields textarea{
     border: none;
     outline:none;
     background: none;
@@ -535,4 +563,113 @@ nav ul li{
         margin: 10px 0px;
     }
    
+}
+
+/* rec **************************************************************************************************** */
+.recdsawrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    background-color: bisque;
+}
+
+.recdsacard{
+    border: 2px solid rgb(99, 211, 96);
+    border-radius: 5px;
+    width: 880px;
+    height: 200px;
+    padding: 2rem 1rem;
+    box-shadow: 0px 7px 10px rgb(0,0,0,0.5);
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgb(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+}
+
+.recdsacard:hover{
+    transform: translateY(20px);
+}
+
+.recdsacard:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,176,155,0.5),rgba(150,201,61,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.recdsacard:hover:before{
+     opacity: 1;
+}
+
+.recdsacard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.recdsacard .info{
+    position: relative;
+    z-index: 3;
+    columns: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.recdsacard:hover .info{
+     opacity: 1;
+     transform: translateY(0px);
+
+}
+
+.recdsacard .info h1{
+    margin: 0;
+}
+
+.recdsacard .info p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.recdsacard .info .read{
+     text-decoration: none;
+     border-radius: 10px;
+     padding: 0.5rem 1rem;
+     background: #fff;
+     color: #000;
+     font-size: 14px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: 0.1s ease-in-out;
+}
+
+.recdsacard .info .read:hover{
+    box-shadow: 0px 7px 10px rgb(0,0,0,0.5);
+    background-color: aqua;
+    border: 2px solid black;
+}
+.newsb{
+    background-color: bisque;
+}
+.news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-left: 190px;
+    margin-bottom: 10px;
 }
