@@ -3,16 +3,15 @@ const express= require("express");
 const app= express();
 require("./db/conn");
 const Register=require("./models/registers");
+const contactus=require("./models/contactus");
 const port= process.env.PORT || 8000;
 
 const { json } = require("express");
 const staticPath= path.join(__dirname,"../public");
 app.use(express.static(staticPath));
 app.set("view engine","hbs");
-
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-
 
 // -----------------------/register ki jagah / ye kiya hu aur / ki jagah /index
 app.get("/", (req,res)=>{
@@ -77,6 +76,23 @@ app.post("/", async (req,res)=>{
      }catch(error){
         res.send(error);
      }
+});
+
+app.post("/index", async (req,res)=>{
+    try{
+       const registerEmployee = new contactus({
+           fname: req.body.fname,
+           lname:req.body.lname,
+           email: req.body.email,
+           phone: req.body.phone,
+           message: req.body.message,
+       })
+
+       const registered=registerEmployee.save();
+       res.render("index");
+    }catch(error){
+       res.send(error);
+    }
 });
 
 app.listen(port,()=>{
