@@ -187,6 +187,7 @@ nav ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 10px;
 }
 .button{
     background-color: rgb(84, 236, 236);
