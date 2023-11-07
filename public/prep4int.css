@@ -153,10 +153,13 @@ nav ul li a{
 .third{
     display: flex;
 }
-.box1 {
+.amans{
+    opacity: 95%;
+}
+/* .box1 {
     padding: 20px;
     padding-top: 60px;
-}
+} */
 .box11{
     border: 3px  gray;
     border-radius: 10px;
@@ -194,11 +197,11 @@ nav ul li a{
     align-items: center;
     justify-content: center;
 }
-.button:hover{
+/* .button:hover{
     transform: translateY(-1px);
     transition: 0.2s ease-in-out;
     font-size: 1.1rem;
-}
+} */
 
 /* que *********************************************************************************************************/
 .a{
