@@ -5,8 +5,14 @@
 
 /* navigation popup *********************************************************************************** */
 ul li.lioful {
-    position: relative;
-    margin-left: 500px;
+    position: absolute;
+    right:10px;
+    float:right;
+}
+
+.none{
+    /* ! important nhi karoge to jo display block hai wo display none ko override kar rhe hai */
+    display: none !important;
 }
 
 ul li.lioful a { 
@@ -29,7 +35,7 @@ ul li ul.dropdown li a {
 
 
 ul li ul.dropdown {
-    /* width: 100%; */
+    width: 140px;
     background: rgb(78, 78, 236);
     position: absolute;
     z-index: 999;
@@ -50,9 +56,19 @@ ul li.lioful:hover ul.dropdown {
     display: block;
 }
 
+@media only screen and (max-width: 750px) {
+    .navi {
+      display: none !important;
+    }
+    .none{
+        display: block !important;
+    }
+  }
+
 /*home page **************************************************************************************************** */
 nav ul{
     /* position: fixed; */
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
@@ -69,7 +85,7 @@ nav ul{
     color: black;
 }
 nav ul li{
-    padding: 0 25px;
+    padding: 0 15px;
 }
 
 nav ul li a{
@@ -102,56 +118,62 @@ nav ul li a{
     font-size: 1.1rem;
 }
 
-
- .containers{
-    display: flex;
+/* about*************************************************************************************************** */
+.containers{
+    position: relative;
     background-color: rgb(242, 229, 210);
+    min-height: 100vh;
 }
 .container{
-    min-height: 100vh;
-    color: black;
-    margin-top: 10px;
-   width: 100%;
-   border-radius: 12px;
-   padding: 54px;
+    position: absolute;
+    top: 40px;
+    left:60px;
 }
 .container1{
-    margin-top: 150px;
-    margin-right: 150px;
+    position: absolute;
+    top: 150px;;
+    right:120px;
 }
 .container1 img{
+    width: 300px;
+    height: 270px;
     border-radius: 200px;
-    z-index: 2;
 }
+
+@media only screen and (max-width: 1100px) {
+    .container{
+        left: 0px;
+        width: 80% !important;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .container1{
+        display: none;
+    }
+}
+
 #about{
     font-size: 3rem;
     font-weight: bolder;
-    margin-top: 80px;
-    margin-left: 60px;
+    padding-top: 80px;
+    padding-left: 60px;
 }
 #para{
     font-size: 1.5rem;
-    margin-left: 60px;
+    padding-left: 60px;
+    padding-top: 10px;
 }
 #a{
     padding-top: 20px;
     font-size: 1.5rem;
-    margin-left: 60px;
+    padding-left: 60px;
 }
 
-#img{
-    padding: 0%;
-    margin-top: 10px;
-}
+
+/* PRACTICE************************************************************************************************ */
 .first{
     background-color: rgb(242, 229, 210);
-}
-.second{
-    padding: 50px;
-    padding-top: 10px;
-}
-.third{
-    display: flex;
 }
 .amans{
     opacity: 95%;
@@ -159,7 +181,7 @@ nav ul li a{
 /* .box1 {
     padding: 20px;
     padding-top: 60px;
-} */
+}*/
 .box11{
     border: 3px  gray;
     border-radius: 10px;
@@ -175,6 +197,7 @@ nav ul li a{
     font-size: 1.2rem;
     font-weight: bolder;
 }
+
 .boxwrite{
     display: flex;
     align-items: center;
@@ -190,19 +213,22 @@ nav ul li a{
     padding-bottom: 10px;
 }
 .button{
-    background-color: rgb(84, 236, 236);
     padding: 5px;
     border: 2px solid black;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-/* .button:hover{
-    transform: translateY(-1px);
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
+} 
+
+.button:hover{
+    background-color: #02fe41 !important;
     transition: 0.2s ease-in-out;
-    font-size: 1.1rem;
-} */
+    box-shadow: 10px 7px 10px rgb(0,0,0,0.5);
+    transform: translateY(-1px);
+} 
+
 
 /* que *********************************************************************************************************/
 .a{
@@ -219,43 +245,19 @@ nav ul li a{
     border-radius: 5px;
     background-color: aqua;
 }
-.grid-container {
-    display: grid;
-    grid-template-rows: repeat(4, 26vw);
-    grid-template-columns: repeat(4, 21vw);
-    grid-gap: 50px;
-    padding-top: 30px;
-    padding-left: 10px;
-    background-color: bisque;
-  }
-.grid-item{
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(236, 250, 205);
-    font-size: 1.5rem;
-    font-weight: bolder;
-    border-radius: 20px;
-    border-style: outset;
-}
 
 .quegrid-container {
-    display: grid;
-    grid-template-rows: repeat(15, 35vw);
-    grid-template-columns: repeat(1, 96vw);
-    grid-gap: 20px;
-    padding-top: 10px;
-    padding-left: 10px;
     background-color: bisque;
   }
-  .quegrid-item{
+.quegrid-item{
     border: 2px solid black;
-    background-color: rgb(236, 250, 205);
     border-radius: 20px;
     border-style: outset;
+    background-color: rgb(236, 250, 205);
+    margin-bottom:10px ;
+    margin-left: 5px;
+    margin-right: 5px;
 }
-
 .aman1 {
     padding-left: 50px;
     padding-top: 5px;
@@ -269,20 +271,35 @@ nav ul li a{
     color: blue;
     font-size: 20px;
 }
-
-.aman11 a p{
+div.aman11 li{
     padding-top: 10px;
 }
 
 /* alltopics overview ******************************************************************************************************/
-.wrapper{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    padding-bottom: 50px;
+.whole{
     background-color: bisque;
 }
+.wrapper{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-around;
+}
 
+@media only screen and (max-width: 1000px){
+    .whole{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper{
+        margin-bottom: 0px;
+        display: block;
+    }
+    .card{
+        margin-bottom: 50px;
+    }
+}
 .card{
     width: 280px;
     height: 300px;
@@ -570,21 +587,25 @@ nav ul li a{
 }
 
 /* rec **************************************************************************************************** */
+.sec{
+    background-color: bisque;
+}
+
 .recdsawrapper{
     display: flex;
     width: 100%;
     justify-content: space-around;
     padding-bottom: 50px;
-    background-color: bisque;
 }
 
 .recdsacard{
-    border: 2px solid rgb(99, 211, 96);
+    border: 2px solid  rgb(171, 138, 138);
     border-radius: 5px;
+    border-style: inset;
     width: 880px;
-    height: 200px;
+    height: 170px;
     padding: 2rem 1rem;
-    box-shadow: 0px 7px 10px rgb(0,0,0,0.5);
+    box-shadow: 10px 10px 10px rgb(0,0,0,0.5);
     background: #fff;
     position: relative;
     display: flex;
@@ -666,15 +687,21 @@ nav ul li a{
     background-color: aqua;
     border: 2px solid black;
 }
-.newsb{
-    background-color: bisque;
-}
-.news{
+
+
+.danger {
+    background-color: rgb(200, 200, 221);
+    border-left: 10px solid blue;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+    min-height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 70%;
-    margin-left: 190px;
-    margin-bottom: 10px;
-}
-//hii
+    padding: 0px 10px;
+  }
+
+  .dang{
+    font-weight: 5;
+  }
