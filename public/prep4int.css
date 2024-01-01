@@ -139,7 +139,7 @@ nav ul li a{
 .containers{
     position: relative;
     background-color: rgb(242, 229, 210);
-    min-height: 90vh;
+    min-height: 100vh;
 }
 .container{
     position: absolute;
@@ -189,6 +189,7 @@ nav ul li a{
 
 @media only screen and (max-width: 550px) {
     #about{
+        padding-top: 20px;
         font-size: 2rem;
         padding-left: 30px;
     }
