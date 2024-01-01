@@ -10,6 +10,14 @@ ul li.lioful {
     float:right;
 }
 
+@media only screen and (max-width: 450px) {
+    ul li.lioful {
+        right:0px;
+    }
+  }
+
+
+
 .none{
     /* ! important nhi karoge to jo display block hai wo display none ko override kar rhe hai */
     display: none !important;
@@ -56,16 +64,7 @@ ul li.lioful:hover ul.dropdown {
     display: block;
 }
 
-@media only screen and (max-width: 750px) {
-    .navi {
-      display: none !important;
-    }
-    .none{
-        display: block !important;
-    }
-  }
 
-/*home page **************************************************************************************************** */
 nav ul{
     /* position: fixed; */
     position: relative;
@@ -118,11 +117,29 @@ nav ul li a{
     font-size: 1.1rem;
 }
 
+@media only screen and (max-width: 750px) {
+    .navi {
+      display: none !important;
+    }
+    .none{
+        display: block !important;
+    }
+  }
+
+@media only screen and (max-width: 370px) {
+    .brand{
+        font-size: 1.3rem !important;
+    }
+    .brand img{
+        width: 70px;
+    }
+}
+
 /* about*************************************************************************************************** */
 .containers{
     position: relative;
     background-color: rgb(242, 229, 210);
-    min-height: 100vh;
+    min-height: 90vh;
 }
 .container{
     position: absolute;
@@ -170,6 +187,28 @@ nav ul li a{
     padding-left: 60px;
 }
 
+@media only screen and (max-width: 550px) {
+    #about{
+        font-size: 2rem;
+        padding-left: 30px;
+    }
+    #para{
+        margin-left: 0;
+        width: 100%;
+        font-size: 1.5rem;
+        padding-left: 30px;
+    }
+    #a{
+        margin-left: 0;
+        width: 100%;
+        font-size: 1.5rem;
+        padding-left: 50px;
+    }
+    #a li{
+        list-style-type: square;
+    }
+}
+
 
 /* PRACTICE************************************************************************************************ */
 .first{
@@ -213,31 +252,42 @@ nav ul li a{
     padding-bottom: 10px;
 }
 .button{
-    padding: 5px;
-    border: 2px solid black;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
-} 
-
-.button:hover{
-    background-color: #02fe41 !important;
-    transition: 0.2s ease-in-out;
-    box-shadow: 10px 7px 10px rgb(0,0,0,0.5);
-    transform: translateY(-1px);
-} 
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(1, 53, 21, 0.15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(1, 67, 26, 0.15) 0 16px 32px;
+    color: rgb(2, 109, 9);
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
 
 
 /* que *********************************************************************************************************/
 .a{
     padding-top: 10px;
     padding-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: bisque;
+    text-align: center;
 }
 .aa{
     border: 2px solid gray;
@@ -275,6 +325,17 @@ div.aman11 li{
     padding-top: 10px;
 }
 
+@media only screen and (max-width: 550px) {
+    .aman1 {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .aman11 {
+       padding: 10px 10px;
+    }
+}
+
+
 /* alltopics overview ******************************************************************************************************/
 .whole{
     background-color: bisque;
@@ -300,6 +361,7 @@ div.aman11 li{
         margin-bottom: 50px;
     }
 }
+
 .card{
     width: 280px;
     height: 300px;
@@ -387,6 +449,12 @@ div.aman11 li{
     border: 2px solid black;
 }
 
+@media only screen and (max-width: 365px){
+    .card{
+        width: 230px;
+        height: 270px;
+    }
+}
 /* contactus ***************************************************************************************************** */
 
 .section-wrapper{
@@ -587,6 +655,9 @@ div.aman11 li{
 }
 
 /* rec **************************************************************************************************** */
+.xx{
+    background-color: bisque;
+}
 .sec{
     background-color: bisque;
 }
@@ -705,3 +776,40 @@ div.aman11 li{
   .dang{
     font-weight: 5;
   }
+
+@media only screen and (max-width: 950px) {
+    .recdsacard{
+        width: 680px;
+        height: 150px;
+    }
+    .inside{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .recdsacard{
+        width: 480px;
+        height: 100px;
+    }
+    .inside{
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .recdsacard{
+        width: 280px;
+        height: 40px;
+    }
+    .inside{
+        font-size: 0.5rem;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .recdsacard{
+        width: 270px;
+        height: 45px;
+    }
+    .inside{
+        font-size: 0.5rem;
+    }
+}
