@@ -189,7 +189,7 @@ nav ul li a{
 
 @media only screen and (max-width: 550px) {
     #about{
-        padding-top: 10px;
+        padding-top: 0px;
         font-size: 2rem;
         padding-left: 30px;
     }
